@@ -1,0 +1,475 @@
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes rot{
+    from{transform: translate(-50%,-50%) rotate(0deg);}
+    to{transform: translate(-50%,-50%) rotate(360deg);}
+}
+@keyframes appear{
+    from{opacity:0;top:150%;}
+    to{opacity:0.8;top:50%;}
+}
+@keyframes user{
+    from{opacity:0;top:150%;}
+    to{opacity:0.8;top:20%;}
+}
+@keyframes pass{
+    from{opacity:0;top:150%;}
+    to{opacity:0.8;top:40%;}
+}
+@keyframes button{
+    from{opacity:0;top:150%;}
+    to{opacity:0.8;top:70%;}
+}
+@keyframes inpuser{
+    from{opacity:0;top:150%;}
+    to{opacity:0.8;top:17.5%;}
+}
+@keyframes inppass{
+    from{opacity:0;top:150%;}
+    to{opacity:0.8;top:37.5%;}
+}
+@keyframes form {
+    from{left: 0;}
+    to{left: 100%;}
+    
+}
+@keyframes welc {
+    from{left: -100%;}
+    to{left: 0;}
+    
+}
+@keyframes welcshrink {
+    from{top: 50%; font-size: 40px;}
+    to{top: 30%; font-size: 20px;}
+    
+}
+@keyframes dotshrink {
+    from{top: 40%; width: 15px;height: 15px;}
+    to{top: 25%; width: 7.5px;height: 7.5px;}
+    
+}
+@keyframes name {
+    from{left: 300%;}
+    to{left: 50%;}
+    
+}
+@keyframes logo {
+    from{left: 50%; top: 50%; transform: translate(-50%,-50%) scale(1); opacity: 0.8;}
+    to{left: 10%; top: 15%; transform: translate(-50%,-50%) scale(0.3); opacity: 1;}
+    
+}
+@keyframes list {
+    from{visibility: visible; height: 120px; top: 7.718%;}
+    to{visibility: visible; height: 400px; top: 25%;}
+    
+}
+@keyframes display {
+    0%{width: 0px; height: 20px; visibility: visible;}
+    25%{width: 1000px; height: 20px; visibility: visible;}
+    25.1%{width: 1000px; height: 20px; visibility: visible;}
+    100%{width: 1000px; height: 650px; visibility: visible;}
+    
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(0, 39, 37),rgb(0, 122, 116) 60%,rgb(255, 206, 70),rgb(245, 180, 0));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#left{
+    position: fixed;
+    left: -48%;
+    height: 100%;
+    width: 50%;
+    background-color: pink;
+    filter: blur(20px);
+    opacity: 0.4;
+    transition: 4s;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#right{
+    position: fixed;
+    left: 98%;
+    height: 100%;
+    width: 50%;
+    background-color: pink;
+    filter: blur(20px);
+    opacity: 0.4;
+    transition: 4s;
+    z-index: 1;
+    visibility: hidden;
+}
+#top{
+    position: fixed;
+    top: -48%;
+    height: 50%;
+    width: 100%;
+    background-color: pink;
+    filter: blur(20px);
+    opacity: 0.4;
+    transition: 4s;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#bottom{
+    position: fixed;
+    top: 98%;
+    height: 50%;
+    width: 100%;
+    background-color: pink;
+    filter: blur(20px);
+    opacity: 0.4;
+    transition: 4s;
+    z-index: 1;
+    visibility: hidden;
+}
+
+
+#cont{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    
+}
+.circle{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(155, 101, 0),rgb(189, 123, 0),orange,rgb(255, 215, 141),rgb(255, 235, 199));
+    transform: translate(-50%,-50%);
+    animation: blink 2s infinite;
+}
+.triangle{
+    position: fixed;
+    border-top: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;  
+    transform: translate(-50%,-50%);
+    animation: blink 2s infinite, rot 10s infinite;
+}
+.square{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(rgb(155, 101, 0),rgb(189, 123, 0),orange,rgb(255, 215, 141),rgb(255, 235, 199));
+    transform: translate(-50%,-50%);
+    border-radius: 15%;
+    animation: blink 2s infinite, rot 10s infinite;
+}
+#circle{
+    top: 50%;
+    left: 50%;
+    
+}
+#circle::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: orange;
+    position: fixed;
+    opacity: 0.9;
+    filter: blur(30px);
+    animation: blink 2s infinite;
+
+}
+
+#cont2{
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    transform: translate(-50%,-50%);
+    border-radius: 5%;
+    opacity: 0;
+    background: linear-gradient(45deg,white,rgb(221, 221, 221),white),linear-gradient(to left,transparent,rgb(221, 221, 221),transparent);
+    animation: appear 2s forwards;
+    z-index: 300;
+}
+#cont3{
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    transform: translate(-50%,-50%);
+    border-radius: 5%;
+    opacity: 0;
+    animation: appear 2s forwards;   
+    z-index: 300;
+}
+#cont4{
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    transform: translate(-50%,-50%);
+    border-radius: 5%;
+    opacity: 0;
+    animation: appear 2s forwards;   
+    z-index: 300;
+}
+#user{
+    position: absolute;
+    top: 150%;
+    left: 12%;
+    width: 100px;
+    height: 50px;
+    color: rgb(0, 39, 37);
+    font-size: 30px;
+    animation: user 2s forwards;
+    z-index: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+#pass{
+    position: absolute;
+    top: 150%;
+    left: 12%;
+    width: 100px;
+    height: 50px;
+    color: rgb(0, 39, 37);
+    font-size: 30px;
+    animation: pass 2s forwards;
+    z-index: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+#button{
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    width: 450px;
+    height: 50px;
+    background: transparent;
+    border: 4px solid rgb(245, 180, 0);
+    font-size: 30px;
+    animation: button 2s forwards;
+    z-index: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+    color: rgb(0, 39, 37);
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+}
+#buttonr{
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    width: 450px;
+    height: 50px;
+    background: transparent;
+    font-size: 30px;
+    animation: button 2s forwards;
+    z-index: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
+}
+#inpuser{
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    width: 250px;
+    height: 40px;
+    border: transparent;
+    border-bottom: 4px dotted rgb(245, 180, 0);
+    background: transparent;
+    z-index: 300;
+    animation: inpuser 2s forwards;
+    color: rgb(0, 39, 37);
+    
+}
+#inppass{
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    width: 250px;
+    height: 40px;
+    border: transparent;
+    border-bottom: 4px dotted rgb(245, 180, 0);
+    background: transparent;
+    z-index: 300;
+    animation: inppass 2s forwards;
+    
+}
+#inpuserr{
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    width: 250px;
+    height: 40px;
+    border: transparent;
+    background: transparent;
+    z-index: 300;
+    animation: inpuser 2s forwards;
+    outline: transparent;
+    caret-color: transparent;
+    color: transparent;
+    
+}
+#inppassr{
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    width: 250px;
+    height: 40px;
+    border: transparent;
+    background: transparent;
+    z-index: 300;
+    animation: inppass 2s forwards;
+    outline: transparent;
+    caret-color: transparent;
+    color: transparent;
+    
+}
+input{
+    color: rgb(0, 39, 37);
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+#txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgb(0, 39, 37);
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transform: translate(-50%,-50%);
+    letter-spacing: 4px;
+    transition: 2s;
+}
+#container{
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    transform: translate(-50%,-50%);
+    border-radius: 5%;
+    background: linear-gradient(45deg,white,rgb(221, 221, 221),white),linear-gradient(to left,transparent,rgb(221, 221, 221),transparent);
+    animation: appear 2s forwards;
+    overflow: hidden;
+    z-index: 300;
+}
+#form{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    
+}
+#welc{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(45deg,white,rgb(221, 221, 221),white),linear-gradient(to left,transparent,rgb(221, 221, 221),transparent);
+    left: -100%;
+    z-index: 300;
+}
+#welcome{
+    color: rgb(0, 39, 37);
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+#dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(245, 180, 0);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#name{
+    color: rgb(0, 39, 37);
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 300%;
+    transform: translate(-50%,-50%);
+
+}
+#list{
+    width: 180px;
+    height: 120px;
+    background: linear-gradient(45deg,white,rgb(221, 221, 221),white),linear-gradient(to left,transparent,rgb(221, 221, 221),transparent);
+    position: fixed;
+    border-radius: 5%;
+    top: 7.718%;
+    left: 4.14%;
+    z-index: 100;
+    visibility: hidden;
+    overflow: hidden;
+}
+#list span{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    color: rgb(0, 39, 37);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: 1s;
+    text-align: center;
+    cursor: pointer;
+
+}
+#home{
+    top: 15%;
+    left: 50%;
+}
+#mail{
+    top: 35%;
+    left: 50%;
+}
+#settings{
+    top: 55%;
+    left: 50%;
+}
+#contact{
+    top: 75%;
+    left: 50%;
+}
+
+#list span:hover{
+    color: rgb(245, 180, 0);
+}
+#display{
+    width: 1000px;
+    height: 20px;
+    border-radius: 2%;
+    background: linear-gradient(45deg,white,rgb(221, 221, 221),white),linear-gradient(to left,transparent,rgb(221, 221, 221),transparent);
+    position: fixed;
+    top: 7.718%;
+    left: 25%;
+    z-index: 500;
+    visibility: hidden;
+}

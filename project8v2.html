@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="project8v2.css">
+    <head></head>
+    <body id="body" onmousemove="mousecords(event);">
+        <script src="project8v2.js"></script>
+        <div id="cont">
+            <div id="circle" class="circle"></div>
+            <div class="triangle"></div>
+        </div>
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="top"></div>
+        <div id="bottom"></div>
+        <div id="container">
+            <div id="form">
+                <div id="cont2"></div>
+                <div id="user">
+                    <span>Username:</span>
+                </div>
+                <input id="inpuser">
+                <div id="pass">
+                    <span>Password:</span>
+                </div>
+                <input id="inppass" type="password">
+                <div id="button" onclick="up();">
+                    <span id="txt">Sign In</span>
+                </div>
+                <div id="cont3"></div>
+                <div id="buttonr" onclick="explode();" onmouseover="anim();" onmouseout="animinverse();"></div>
+                <input id="inpuserr" onkeyup="translatewords(this);">
+                <input id="inppassr" type="password" onkeyup="translatewords(this);">
+            </div>
+            <div id="welc">
+                <span id="welcome">WELCOME</span>
+                <span id="name">Mohammad</span>
+                <div id="dot"></div>
+                <div id="cont4"></div>
+            </div>
+        </div>
+        <div id="list">
+            <span id="home">HOME</span>
+            <span id="mail">MAIL</span>
+            <span id="settings">SETTINGS</span>
+            <span id="contact">CONTACT US</span>
+        </div>
+        <div id="display"></div>
+        
+        
+        
+        
+    </body>
+</html>
